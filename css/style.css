@@ -29,3 +29,15 @@
 .hidden {
     display: none;
 }
+
+tr > .no-line {
+    border-top: none;
+}
+
+tr > .no-line {
+    border-bottom: none;
+}
+
+tr > .thick-line {
+    border-top: 2px solid;
+}

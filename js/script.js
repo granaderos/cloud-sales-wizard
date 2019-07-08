@@ -20,4 +20,5 @@ function submit() {
     $("#divRedhat").show();
     $("#divGoogleCloud").show();
     $("#questions_div").hide();
+    $("#divSummary").show();
 }
