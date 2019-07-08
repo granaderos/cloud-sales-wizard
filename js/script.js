@@ -1,5 +1,5 @@
 var current_question = 1;
-var total_questions = 6;
+var total_questions = 10;
 $(document).ready(function() {
     $("#performaceSlider").slider();
 });
