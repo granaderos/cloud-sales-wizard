@@ -1,0 +1,31 @@
+#divHeader {
+    background-color: #80010c;
+    margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    height: 50px;
+
+}
+
+#divFooter {
+    height: 100px;
+}
+
+.question {
+    font-size: 20px;
+}
+
+.btn-submit, .btn-next {
+    background-color: #ba1430;
+    color: white;
+    /* padding: */
+}
+
+#divOutput .card {
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}

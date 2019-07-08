@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Advisor</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+    <div id="divHeader">
+        <i class="float-right fa fa-bars"></i>
+    </div>
+    <div class="container">
+        <div id="questions_div">
+            <div id="question_1">
+                <h3>Your Profile:</h3>
+                
+                <div class="question-container">
+                    <p class="question">1. What is your name?</p>
+                    <p>
+                        <input type="text" class="form-control" />
+                    </p>
+                </div>
+
+                <div class="question-container">
+                    <p class="question">2. What is the nature of your business?</p>
+                    <p class="answer">
+                        <select class="form-control">
+                            <option>Financial</option>
+                            <option>Financial</option>
+                            <option>Financial</option>
+                            <option>Financial</option>
+                        </select>
+                    </p>
+                </div>
+                
+                <div class="question-container">
+                    <p class="question">3. Where are you located?</p>
+                    <p class="answer">
+                        <select class="form-control">
+                            <option>Asia Pacific</option>
+                            <option>Asia Pacific</option>
+                            <option>Asia Pacific</option>
+                            <option>Asia Pacific</option>
+                        </select>
+                    </p>
+                </div>
+
+                <div class="question-container">
+                    <p class="question">4. Contact details:</p>
+                    <p class="answer">
+                        <input type="text" class="form-control" />
+                    </p>
+                </div>
+            </div>
+
+            <div id="question_2" class="question-container hidden">
+                <p class="question">Do you have something you want to put on the cloud?</p>
+                <p class="answer">
+                    <input type="radio" name="haveSomethingToPutOnCloud" value="yes"> Yes &nbsp;&nbsp;
+                    <input type="radio" name="haveSomethingToPutOnCloud" value="no"> No
+                </p>
+            </div>
+    
+            <div id="question_3" class="question-container hidden">
+                <p class="question">Do you have an existing appliation?</p>
+                <p class="answer">
+                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                </p>
+            </div>
+            
+            <div  id="question_4" class="question-container hidden">
+                <p class="question">Subcription period:</p>
+                <p class="answer">
+                    <select class="form-control">
+                        <option>Less than 6 months</option>
+                        <option>6 - 12 months</option>
+                        <option>1 year</option>
+                        <option>2 years</option>
+                    </select>
+                </p>
+            </div>
+
+            <div  id="question_5" class="question-container hidden">
+                <p class="question">Cloud perfomance:</p>
+                <p class="answer">
+                    <div id="performaceSlider"></div>
+                </p>
+            </div>
+
+            <br />
+            
+            <button id="btnNext" class="btn btn-next float-right" onclick="next()">Next <i class="fa fa-arrow-circle-right"></i></button>
+            <button id="btnSubmit" class="btn btn-submit hidden" onclick="submit()">Submit</button>
+        </div>
+    </div>
+    
+    <br />
+
+    <div id="divOutput" class="hidden container container-fluid">
+        <h3 class='alert alert-info'>Recommendation/s:</h3>
+        <div class="row">
+            <!-- <h3 class="alert alert-info ">We recommend:</h3> -->
+            <div id="divGoogleCloud" class="card hidden" style="width: 18rem;">
+                <img class="card-img-top" src="images/google_cloud.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Google Cloud</h5>
+                    <p class="card-text">
+                        Transform your business with Google Cloud.
+                        <br />
+                        Modernize workloads on Google’s global, secure, and reliable infrastructure...
+                    </p>
+                    <a href="#" class="btn btn-submit">Learn More</a>
+                </div>
+            </div>
+
+            <div id="divAWS" class="card hidden" style="width: 18rem;">
+                <img class="card-img-top" src="images/aws.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Amazon Web Services</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-submit">Avail</a>
+                </div>
+            </div>
+
+            <div id="divIBMCloud" class="card hidden" style="width: 18rem;">
+                <img class="card-img-top" src="images/ibm_cloud.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">IBM Cloud</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-submit">Avail</a>
+                </div>
+            </div>
+
+            <div id="divAzure" class="card hidden" style="width: 18rem;">
+                <img class="card-img-top" src="images/azure.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Microsoft Azure</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-submit">Avail</a>
+                </div>
+            </div>
+
+            <div id="divRedhat" class="card hidden" style="width: 18rem;">
+                <img class="card-img-top" src="images/redhat.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Redhat</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-submit">Avail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divFooter">
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
