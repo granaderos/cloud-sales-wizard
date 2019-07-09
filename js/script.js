@@ -17,6 +17,11 @@ var ready = -1;
 
 function next() {
     console.log("current question = " + current_question)
+
+    if(current_question > 0) {
+        $("#btnBack").show();
+    }
+
     if(current_question == 2) {
         haveSomethingToPutOnCloud = $("input[name='haveSomethingToPutOnCloud']:checked").val();
         console.log("haveSomethingToPutOnCloud " + haveSomethingToPutOnCloud);
@@ -139,6 +144,7 @@ function displayDialog() {
 function displayCloudSpecificQuestions() {
     $(".question-container").hide();
     $(".b_question").show();
+    $("#btnBack").hide();
     $("#btnNext").hide();
     $("#btnSubmit").show();
     $("#question_10").show("slide", { direction: "right" }, 1000);
