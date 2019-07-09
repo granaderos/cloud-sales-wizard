@@ -3,7 +3,7 @@ var total_questions = 9;
 $(document).ready(function() {
 
     $("#btnGetStarted").click(function() {
-        window.location.href = "index.html";
+        window.location.href = "wizard.html";
     })
 
 });
