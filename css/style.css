@@ -1,5 +1,5 @@
 #divHeader {
-    background-color: #80010c;
+    background-color: #162935;
     margin-bottom: 30px;
     color: white;
     padding: 20px;
@@ -18,7 +18,7 @@
 .btn-back,
 .btn-submit,
 .btn-next {
-    background-color: #ba1430;
+    background-color: #162935;
     color: white;
     /* padding: */
 }
@@ -50,7 +50,7 @@ tr>.thick-line {
 }
 
 #divHeaderHome {
-    background-color: #80010c;
+    background-color: #162935;
     color: white;
     padding: 20px;
     font-size: 25px;
@@ -72,11 +72,10 @@ tr>.thick-line {
     color: white;
     background-color: #313131;
     letter-spacing: 3px;
-    /* font-weight: bold; */
 }
 
 button:hover {
-    background-color: #80010c;
+    background-color: white;
 }
 
 .button {
@@ -105,4 +104,11 @@ button:hover {
     font-size: 27px;
     position: absolute;
     font-style: italic;
+}
+
+.page-header {
+    color: #162935;
+    font-weight: bold;
+    margin-top: -5px;
+    padding-bottom: 10px;
 }
