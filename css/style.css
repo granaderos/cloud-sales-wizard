@@ -1,5 +1,5 @@
 #divHeader {
-    background-color: #80010c;
+    background-color: #162935;
     margin-bottom: 30px;
     color: white;
     padding: 20px;
@@ -18,7 +18,7 @@
 .btn-back,
 .btn-submit,
 .btn-next {
-    background-color: #ba1430;
+    background-color: #162935;
     color: white;
     /* padding: */
 }
@@ -50,7 +50,7 @@ tr>.thick-line {
 }
 
 #divHeaderHome {
-    background-color: #80010c;
+    background-color: #162935;
     color: white;
     padding: 20px;
     font-size: 25px;
@@ -70,29 +70,45 @@ tr>.thick-line {
     font-stretch: semi-expanded;
     padding: 0.5px;
     color: white;
-    background-color: #313131; 
+    background-color: #313131;
     letter-spacing: 3px;
-    /* font-weight: bold; */
 }
 
 button:hover {
-    background-color: #80010c;
+    background-color: white;
 }
 
 .button {
-    /* opacity: .75;
+    opacity: .7;
     filter: alpha(opacity=50);
     border-style: solid;
-    border: 10px white; */
-    top: 58%;
-    left: 38%;
+    border: 10px white;
+    margin-top: 22%;
+    margin-left: 10%;
     position: absolute;
 }
 
-.headline {
-    margin-left: 260px;
-    margin-top: 220px;
+.title {
+    margin-left: 10%;
+    margin-top: 10%;
     color: whitesmoke;
-    font-size: 38px;
+    font-size: 60px;
     position: absolute;
+    letter-spacing: 3px;
+}
+
+.headline {
+    margin-left: 10%;
+    margin-top: 16%;
+    color: whitesmoke;
+    font-size: 27px;
+    position: absolute;
+    font-style: italic;
+}
+
+.page-header {
+    color: #162935;
+    font-weight: bold;
+    margin-top: -5px;
+    padding-bottom: 10px;
 }
