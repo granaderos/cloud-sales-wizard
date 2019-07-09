@@ -1,7 +1,11 @@
 var current_question = 1;
 var total_questions = 9;
 $(document).ready(function() {
-    $("#performaceSlider").slider();
+
+    $("#btnGetStarted").click(function() {
+        window.location.href = "index.html";
+    })
+
 });
 
 var haveSomethingToPutOnCloud = -1
