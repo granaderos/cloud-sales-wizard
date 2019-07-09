@@ -76,7 +76,6 @@ tr>.thick-line {
     color: white;
     background-color: #313131;
     letter-spacing: 3px;
-    /* font-weight: bold; */
 }
 
 .button:hover {
@@ -86,27 +85,31 @@ tr>.thick-line {
 }
 
 .button {
-    /* opacity: .75;
+    opacity: .7;
     filter: alpha(opacity=50);
     border-style: solid;
-    border: 10px white; */
-    top: 58%;
-    left: 38%;
+    border: 10px white;
+    margin-top: 22%;
+    margin-left: 10%;
     position: absolute;
+}
+
+.title {
+    margin-left: 10%;
+    margin-top: 10%;
+    color: whitesmoke;
+    font-size: 60px;
+    position: absolute;
+    letter-spacing: 3px;
 }
 
 .headline {
-    margin-left: 260px;
-    margin-top: 220px;
+    margin-left: 10%;
+    margin-top: 16%;
     color: whitesmoke;
-    font-size: 38px;
+    font-size: 27px;
     position: absolute;
-}
-
-#summary-bg {
-    background-color: #094064;
-    border-radius: 10px;
-    height: 60px;
+    font-style: italic;
 }
 
 .page-header {
@@ -116,8 +119,126 @@ tr>.thick-line {
     padding-bottom: 10px;
 }
 
+#divHeader {
+    background-color: #162935;
+    margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    height: 50px;
+}
 
-/* try */
+#divFooter {
+    height: 100px;
+}
+
+.question {
+    font-size: 20px;
+}
+
+.btn-back {
+    background-color: #cc0000;
+    color: white;
+}
+
+.btn-submit,
+.btn-next {
+    background-color: #29a329;
+    color: white;
+    /* padding: */
+}
+
+#divOutput .card {
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+tr>.no-line {
+    border-top: none;
+}
+
+tr>.no-line {
+    border-bottom: none;
+}
+
+tr>.thick-line {
+    border-top: 2px solid;
+}
+
+#background {
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#divHeaderHome {
+    background-color: #162935;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    height: 50px;
+    margin-top: none;
+}
+
+.start {
+    width: 300px;
+    height: 60px;
+    background-color: #595959;
+    /* border-style: solid;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: rgb(255, 253, 253); */
+    font-size: 25px;
+    font-stretch: semi-expanded;
+    padding: 0.5px;
+    color: white;
+    background-color: #313131;
+    letter-spacing: 3px;
+}
+
+.button:hover {
+    background-color: #313131;
+    opacity: .9;
+    filter: alpha(opacity=50);
+}
+
+.button {
+    opacity: .7;
+    filter: alpha(opacity=50);
+    border-style: solid;
+    border: 10px white;
+    margin-top: 22%;
+    margin-left: 10%;
+    position: absolute;
+}
+
+.title {
+    margin-left: 10%;
+    margin-top: 10%;
+    color: whitesmoke;
+    font-size: 60px;
+    position: absolute;
+    letter-spacing: 3px;
+}
+
+.headline {
+    margin-left: 10%;
+    margin-top: 16%;
+    color: whitesmoke;
+    font-size: 27px;
+    position: absolute;
+    font-style: italic;
+}
+
+.page-header {
+    color: #162935;
+    font-weight: bold;
+    margin-top: -5px;
+    padding-bottom: 10px;
+}
 
 #summary-title {
     color: white;
