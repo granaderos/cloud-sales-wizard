@@ -22,3 +22,7 @@ function submit() {
     $("#questions_div").hide();
     $("#divSummary").show();
 }
+
+$(document).ready(function() {
+    $('.summary_tooltip').tooltip();
+  });
