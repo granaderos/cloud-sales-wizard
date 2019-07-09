@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
+
 <body>
     <div id="divHeader">
         <i class="float-right fa fa-bars"></i>
@@ -21,7 +23,7 @@
         <div id="questions_div">
             <div id="question_1">
                 <h3>Your Profile:</h3>
-                
+
                 <div class="question-container">
                     <p class="question">1. What is your name?</p>
                     <p>
@@ -33,22 +35,27 @@
                     <p class="question">2. What is the nature of your business?</p>
                     <p class="answer">
                         <select class="form-control">
+                            <option>Advertising</option>
+                            <option>Construction</option>
+                            <option>Education</option>
                             <option>Financial</option>
-                            <option>Financial</option>
-                            <option>Financial</option>
-                            <option>Financial</option>
+                            <option>Food</option>
+                            <option>Health Care</option>
+                            <option>Manufacturing</option>
                         </select>
                     </p>
                 </div>
-                
+
                 <div class="question-container">
                     <p class="question">3. Where are you located?</p>
                     <p class="answer">
                         <select class="form-control">
+                            <option>Africa</option>
+                            <option>Arab States</option>
                             <option>Asia Pacific</option>
-                            <option>Asia Pacific</option>
-                            <option>Asia Pacific</option>
-                            <option>Asia Pacific</option>
+                            <option>Europe</option>
+                            <option>North America</option>
+                            <option>South America</option>
                         </select>
                     </p>
                 </div>
@@ -64,74 +71,77 @@
             <div id="question_2" class="question-container hidden">
                 <p class="question">Do you have something you want to put on the cloud?</p>
                 <p class="answer">
-                    <input type="radio" name="haveSomethingToPutOnCloud" value="yes"> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveSomethingToPutOnCloud" value="no"> No
+                    <input type="radio" name="haveSomethingToPutOnCloud" value=1> Yes &nbsp;&nbsp;
+                    <input type="radio" name="haveSomethingToPutOnCloud" value=0> No
                 </p>
             </div>
-    
+
+            <!-- Ask this if prev answer if yes -->
             <div id="question_3" class="question-container hidden">
-                <p class="question">Do you have an existing appliation?</p>
+                <p class="question">Do you have an existing application?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="hasAnExistingApplication" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="hasAnExistingApplication" value=0 /> No
                 </p>
             </div>
-            
-            <div  id="question_4" class="question-container hidden">
+
+            <!-- Ask this if prev answer if yes -->
+            <div id="question_4" class="question-container hidden">
                 <p class="question">Are you knowledgeable about your application?</p>
                 <p class="answer">
-                    <input type="radio" name="clientKnowledgeableAboutApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="clientKnowledgeableAboutApplication" value="no" /> No
+                    <input type="radio" name="clientHasApplicationKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasApplicationKnowledge" value=0 /> No
                 </p>
             </div>
 
-            <div  id="question_5" class="question-container hidden">
-                <p class="question">Are you knowledgeable about cloud?</p>
+            <div id="question_5" class="question-container hidden">
+                <p class="question">Are you knowledgeable about cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="clientKnowledgeableAboutCloud" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="clientKnowledgeableAboutCloud" value="no" /> No
+                    <input type="radio" name="clientHasCloudKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasCloudKnowledge" value=0 /> No
                 </p>
             </div>
 
-            <div  id="question_5" class="question-container hidden">
-                <p class="question">Do you have technical people?</p>
+            <div id="question_6" class="question-container hidden">
+                <p class="question">Do you currently have IT personnel?</p>
                 <p class="answer">
-                    <input type="radio" name="haveTechnicalPeople" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveTechnicalPeople" value="no" /> No
+                    <input type="radio" name="clientHasITPersonnel" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasITPersonnel" value=0 /> No
                 </p>
             </div>
 
-            <div  id="question_5" class="question-container hidden">
-                <p class="question">Are they knowledgeable about cloud?</p>
+            <div id="question_7" class="question-container hidden">
+                <p class="question">Are your IT personnel knowledgeable about cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="personnelHasCloudKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="personnelHasCloudKnowledge" value=0 /> No
                 </p>
             </div>
 
-            <div  id="question_5" class="question-container hidden">
-                <p class="question">Are you willing to avail IBM's support?</p>
+            <div id="question_8" class="question-container hidden">
+                <p class="question">Are you willing to let IBM support your application?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="availIBMSupport" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="availIBMSupport" value=0 /> No
                 </p>
             </div>
 
-            <div  id="question_5" class="question-container hidden">
-                <p class="question">Are you willing to hire and train you people?</p>
+            <div id="question_9" class="question-container hidden">
+                <p class="question">Are you willing to hire and train personnel on cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="willingToHireITPersonnel" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="willingToHireITPersonnel" value=0 /> No
                 </p>
             </div>
 
             <br />
-            
-            <button id="btnNext" class="btn btn-next float-right" onclick="next()">Next <i class="fa fa-arrow-circle-right"></i></button>
+
+            <button id="btnNext" class="btn btn-next float-right" onclick="next()">Next <i
+                    class="fa fa-arrow-circle-right"></i></button>
             <button id="btnSubmit" class="btn btn-submit hidden" onclick="submit()">Submit</button>
         </div>
     </div>
-    
+
     <br />
 
     <div id="divOutput" class="hidden container container-fluid">
@@ -155,7 +165,8 @@
                 <img class="card-img-top" src="images/aws.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Amazon Web Services</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-submit">Avail</a>
                 </div>
             </div>
@@ -164,7 +175,8 @@
                 <img class="card-img-top" src="images/ibm_cloud.jpeg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">IBM Cloud</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-submit">Avail</a>
                 </div>
             </div>
@@ -173,7 +185,8 @@
                 <img class="card-img-top" src="images/azure.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Microsoft Azure</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-submit">Avail</a>
                 </div>
             </div>
@@ -182,7 +195,8 @@
                 <img class="card-img-top" src="images/redhat.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Redhat</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
                     <a href="#" class="btn btn-submit">Avail</a>
                 </div>
             </div>
@@ -190,7 +204,7 @@
     </div>
 
     <div id="divFooter">
-        
+
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -199,4 +213,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
