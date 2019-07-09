@@ -101,7 +101,7 @@ function next() {
 
     // $(".question-container").hide();
     ++current_question;
-    $("#question_" + current_question).show("slide", { direction: "right" }, 1000);
+    $("#question_" + current_question).slideDown("slow");
 }
 
 function displayDialog() {
@@ -151,7 +151,8 @@ function displayCloudSpecificQuestions() {
     $("#btnBack").hide();
     $("#btnNext").hide();
     $("#btnSubmit").show();
-    $("#question_10").show("slide", { direction: "right" }, 1000);
+    // $("#question_10").show("slide", { direction: "right" }, 1000);
+    $("#question_10").slideDown("slow");
 }
 
 function submit() {
