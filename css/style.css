@@ -15,10 +15,14 @@
     font-size: 20px;
 }
 
-.btn-back,
+.btn-back {
+    background-color: #cc0000;
+    color: white;
+}
+
 .btn-submit,
 .btn-next {
-    background-color: #162935;
+    background-color: #29a329;
     color: white;
     /* padding: */
 }
@@ -74,7 +78,7 @@ tr>.thick-line {
     letter-spacing: 3px;
 }
 
-button:hover {
+.button:hover {
     background-color: #313131;
     opacity: .9;
     filter: alpha(opacity=50);
