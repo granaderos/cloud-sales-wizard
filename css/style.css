@@ -43,7 +43,7 @@ tr>.thick-line {
     border-top: 2px solid;
 }
 
-#bg {
+#background {
     background-image: url("../images/home.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,27 +59,40 @@ tr>.thick-line {
 }
 
 .start {
-    width: 400px;
-    height: 100px;
-    background-color: rgb(223, 217, 217);
-    border-style: solid;
+    width: 300px;
+    height: 60px;
+    background-color: #595959;
+    /* border-style: solid;
     border-radius: 20px;
-    border-color: rgb(139, 138, 138);
-    font-size: 40px;
-    font-family: 'Monospace';
+    border-width: 3px;
+    border-color: rgb(255, 253, 253); */
+    font-size: 25px;
+    font-stretch: semi-expanded;
+    padding: 0.5px;
+    color: white;
+    background-color: #313131; 
+    letter-spacing: 3px;
     /* font-weight: bold; */
-    padding: 4px;
 }
 
 button:hover {
-    background-color: #888a88;
+    background-color: #80010c;
 }
 
 .button {
-    opacity: 0.8;
+    /* opacity: .75;
     filter: alpha(opacity=50);
-    margin-top: 400px;
-    margin-left: 650px;
     border-style: solid;
-    border: 10px white;
+    border: 10px white; */
+    top: 58%;
+    left: 38%;
+    position: absolute;
+}
+
+.headline {
+    margin-left: 260px;
+    margin-top: 220px;
+    color: whitesmoke;
+    font-size: 38px;
+    position: absolute;
 }
