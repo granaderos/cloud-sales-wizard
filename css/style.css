@@ -126,3 +126,17 @@ tr>.thick-line {
     border-radius: 10px;
     height: 60px;
 }
+
+#line {
+    margin-top: 44.1%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #404040;
+}
+
+#footer {
+    height: 40px;
+    background-color: #313131;
+}
