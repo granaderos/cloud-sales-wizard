@@ -3,7 +3,6 @@ var total_questions = 9;
 $(document).ready(function() {
 
     $('.summary_tooltip').tooltip();    
-    // $(".progressBarTooltip").tooltip();
 
     $("#btnGetStarted").click(function() {
         window.location.href = "wizard.html";
@@ -165,12 +164,12 @@ function displayCloudSpecificQuestions() {
 }
 
 function submit() {
-    $(".questionProgress").hide();
     $("#divOutput").show();
     $("#divRedhat").show();
     $("#divGoogleCloud").show();
     $("#questions_div").hide();
     $("#divSummary").show();
+    $(".questionProgress ul li").hide();
 }
 
 function progressNext() {
