@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cloud Advisor</title>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
@@ -21,7 +24,7 @@
     </div>
     <div class="container">
         <div id="questions_div">
-            <div id="question_1">
+            <div id="question_1" class="question-container">
                 <h3>Your Profile:</h3>
 
                 <div class="question-container">
@@ -71,94 +74,97 @@
             <div id="question_2" class="question-container hidden">
                 <p class="question">Do you have something you want to put on the cloud?</p>
                 <p class="answer">
-                    <input type="radio" name="haveSomethingToPutOnCloud" value="yes"> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveSomethingToPutOnCloud" value="no"> No
+                    <input type="radio" name="haveSomethingToPutOnCloud" value=1> Yes &nbsp;&nbsp;
+                    <input type="radio" name="haveSomethingToPutOnCloud" value=0> No
                 </p>
             </div>
 
+            <!-- Ask this if prev answer if yes -->
             <div id="question_3" class="question-container hidden">
-                <p class="question">Do you have an existing appliation?</p>
+                <p class="question">Do you have an existing application?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="hasAnExistingApplication" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="hasAnExistingApplication" value=0 /> No
                 </p>
             </div>
 
+            <!-- Ask this if prev answer if yes -->
             <div id="question_4" class="question-container hidden">
                 <p class="question">Are you knowledgeable about your application?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="clientHasApplicationKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasApplicationKnowledge" value=0 /> No
                 </p>
             </div>
 
             <div id="question_5" class="question-container hidden">
                 <p class="question">Are you knowledgeable about cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="clientHasCloudKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasCloudKnowledge" value=0 /> No
                 </p>
             </div>
 
             <div id="question_6" class="question-container hidden">
                 <p class="question">Do you currently have IT personnel?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="clientHasITPersonnel" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="clientHasITPersonnel" value=0 /> No
                 </p>
             </div>
 
             <div id="question_7" class="question-container hidden">
                 <p class="question">Are your IT personnel knowledgeable about cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="personnelHasCloudKnowledge" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="personnelHasCloudKnowledge" value=0 /> No
                 </p>
             </div>
 
             <div id="question_8" class="question-container hidden">
                 <p class="question">Are you willing to let IBM support your application?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="availIBMSupport" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="availIBMSupport" value=0 /> No
                 </p>
             </div>
 
             <div id="question_9" class="question-container hidden">
                 <p class="question">Are you willing to hire and train personnel on cloud technology?</p>
                 <p class="answer">
-                    <input type="radio" name="haveAnExistingApplication" value="yes" /> Yes &nbsp;&nbsp;
-                    <input type="radio" name="haveAnExistingApplication" value="no" /> No
+                    <input type="radio" name="willingToHireITPersonnel" value=1 /> Yes &nbsp;&nbsp;
+                    <input type="radio" name="willingToHireITPersonnel" value=0 /> No
                 </p>
             </div>
+
 
             <div id="question_10" class="question-container hidden">
                 <h3>Your Business:</h3>
 
-                <div class="question-container">
+                <div class="question-container b_question">
                     <p class="question">Type of transaction</p>
                     <p>
                         <input type="text" class="form-control" />
                     </p>
                 </div>
 
-                <div class="question-container">
+                <div class="question-container b_question">
                     <p class="question">Average Number of Daily Transactions</p>
                     <input type="text" class="form-control" />
                     </p>
                 </div>
 
-                <div class="question-container">
+                <div class="question-container b_question">
                     <p class="question">Types of Data Being Stored</p>
                     <p class="answer">
-                            <input type="checkbox">Documents</input> &nbsp;&nbsp;
-                            <input type="checkbox">Images</input> &nbsp;&nbsp;
-                            <input type="checkbox">Videos</input> &nbsp;&nbsp;
-                            <input type="checkbox">Audio Files</input>
+                        <input type="checkbox">&nbsp;Documents</input> &nbsp;&nbsp;
+                        <input type="checkbox">&nbsp;Images</input> &nbsp;&nbsp;
+                        <input type="checkbox">&nbsp;Videos</input> &nbsp;&nbsp;
+                        <input type="checkbox">&nbsp;Audio Files</input>
                     </p>
                 </div>
 
-                <div class="question-container">
+                <div class="question-container b_question">
                     <p class="question">Application Accesibility</p>
                     <p class="answer">
                         <select class="form-control">
@@ -401,8 +407,17 @@
 
     </div>
 
+    <!-- Dialogs -->
+    <div id="divReady" class="hidden" title="Great!">
+        <p>You are ready for cloud!</p>
+    </div>
+
+    <div id="divNotReady" class="hidden" title="Sorry.">
+        <p>It seems like you are not yet ready for cloud.</p>
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
