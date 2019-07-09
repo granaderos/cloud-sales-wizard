@@ -61,29 +61,37 @@ tr>.thick-line {
     width: 300px;
     height: 60px;
     background-color: #595959;
-    border-style: solid;
+    /* border-style: solid;
     border-radius: 20px;
     border-width: 3px;
-    border-color: rgb(255, 253, 253);
-    font-size: 35px;
-    font-family: 'Times New Roman';
+    border-color: rgb(255, 253, 253); */
+    font-size: 25px;
     font-stretch: semi-expanded;
-    padding: 1px;
+    padding: 0.5px;
     color: white;
+    background-color: #313131; 
     letter-spacing: 3px;
     /* font-weight: bold; */
 }
 
 button:hover {
-    background-color: #999999;
+    background-color: #80010c;
 }
 
 .button {
-    opacity: .75;
+    /* opacity: .75;
     filter: alpha(opacity=50);
     border-style: solid;
-    border: 10px white;
-    top: 70%;
-    left: 40%;
+    border: 10px white; */
+    top: 58%;
+    left: 38%;
+    position: absolute;
+}
+
+.headline {
+    margin-left: 260px;
+    margin-top: 220px;
+    color: whitesmoke;
+    font-size: 38px;
     position: absolute;
 }
