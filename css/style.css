@@ -245,3 +245,9 @@ tr>.thick-line {
     margin: 10px;
     padding: 10px;
 }
+
+#summary-bg {
+    background-color: #094064;
+    border-radius: 10px;
+    height: 60px;
+}
