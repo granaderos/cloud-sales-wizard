@@ -13,13 +13,17 @@ var personnelHasCloudKnowledge = -1;
 var availIBMSupport = -1;
 var willingToHireITPersonnel = -1;
 
+var ready = -1;
+
 function next() {
     console.log("current question = " + current_question)
     if(current_question == 2) {
         haveSomethingToPutOnCloud = $("input[name='haveSomethingToPutOnCloud']:checked").val();
         console.log("haveSomethingToPutOnCloud " + haveSomethingToPutOnCloud);
         if(haveSomethingToPutOnCloud == 0) {
-            alert("You're not ready for cloud.")
+            // alert("You're not ready for cloud.")
+            ready = 0;
+            displayDialog();
             return;
         }
     } else if(current_question == 3) {
@@ -37,10 +41,13 @@ function next() {
             ++current_question;
         }
     } else if(current_question == 5) {
-        clientHasCloudKnowledge = $("#input[name='clientHasCloudKnowledge']:checked").val();
+        clientHasCloudKnowledge = $("input[name='clientHasCloudKnowledge']:checked").val();
         console.log("clientHasCloudKnowledge = " + clientHasCloudKnowledge)
         if(clientHasCloudKnowledge == 1) {
-            alert("You are ready for cloud.");
+            // alert("You are ready for cloud.");
+            ready = 1;
+            displayDialog();
+            return;
         }
     } else if(current_question == 6) {
         clientHasITPersonnel = $("input[name='clientHasITPersonnel']:checked").val();
@@ -54,14 +61,18 @@ function next() {
         if(personnelHasCloudKnowledge == 0) {
             ++current_question;
         } else {
-            alert("You are ready for cloud.")
+            ready = 1;
+            // alert("You are ready for cloud.")
+            displayDialog();
             return;
         }
     } else if(current_question == 8) {
         availIBMSupport = $("input[name='availIBMSupport']:checked").val();
         console.log("availIBMSupport = " + availIBMSupport);
         if(availIBMSupport == 1) {
-            alert("You are ready for cloud.");
+            ready = 1;
+            // alert("You are ready for cloud.");
+            displayDialog();
             return;
         }
     } else if(willingToHireITPersonnel == 9) {
@@ -70,19 +81,66 @@ function next() {
         if(willingToHireITPersonnel == 0) {
             alert("You are not yet ready for cloud.");
         } else {
-            alert("You are ready for cloud.");
+            ready = 1;
+            // alert("You are ready for cloud.");
+            displayDialog();
+            return;
             // procees to the next set of questions
         }
     }
 
-    // if(current_question == total_questions - 1) {
-    //     $("#btnNext").hide();
-    //     $("#btnSubmit").show();
-    // }
-
-    $("#question_" + current_question).hide();
+    $(".question-container").hide();
     ++current_question;
     $("#question_" + current_question).show("slide", { direction: "right" }, 1000);
+}
+
+function displayDialog() {
+    if(ready == 1) {
+        $("#divReady").dialog({
+            show: {
+                effect: "slide",
+                duration: 500
+            },
+            hide: {
+                effect: "explode",
+                duration: 500
+            },
+            modal: true,
+            width:400,
+            buttons: {
+                "Proceed": function() {
+                    $(this).dialog("close");
+                    displayCloudSpecificQuestions();
+                }
+            }
+        });
+    } else {
+        $("#divNotReady").dialog({
+            show: {
+                effect: "slide",
+                duration: 500
+            },
+            hide: {
+                effect: "explode",
+                duration: 500
+            },
+            modal: true,
+            width:400,
+            buttons: {
+                "Close": function() {
+                    window.location.reload();
+                }
+            }
+        });
+    }
+}
+
+function displayCloudSpecificQuestions() {
+    $(".question-container").hide();
+    $(".b_question").show();
+    $("#btnNext").hide();
+    $("#btnSubmit").show();
+    $("#question_10").show("slide", { direction: "right" }, 1000);
 }
 
 function submit() {
@@ -90,4 +148,5 @@ function submit() {
     $("#divRedhat").show();
     $("#divGoogleCloud").show();
     $("#questions_div").hide();
+    $("#divSummary").show();
 }
