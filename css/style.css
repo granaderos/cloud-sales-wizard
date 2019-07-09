@@ -42,7 +42,7 @@ tr>.thick-line {
     border-top: 2px solid;
 }
 
-#bg {
+#background {
     background-image: url("../images/home.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,27 +58,32 @@ tr>.thick-line {
 }
 
 .start {
-    width: 400px;
-    height: 100px;
-    background-color: rgb(223, 217, 217);
+    width: 300px;
+    height: 60px;
+    background-color: #595959;
     border-style: solid;
     border-radius: 20px;
-    border-color: rgb(139, 138, 138);
-    font-size: 40px;
-    font-family: 'Monospace';
+    border-width: 3px;
+    border-color: rgb(255, 253, 253);
+    font-size: 35px;
+    font-family: 'Times New Roman';
+    font-stretch: semi-expanded;
+    padding: 1px;
+    color: white;
+    letter-spacing: 3px;
     /* font-weight: bold; */
-    padding: 4px;
 }
 
 button:hover {
-    background-color: #888a88;
+    background-color: #999999;
 }
 
 .button {
-    opacity: 0.8;
+    opacity: .75;
     filter: alpha(opacity=50);
-    margin-top: 400px;
-    margin-left: 650px;
     border-style: solid;
     border: 10px white;
+    top: 70%;
+    left: 40%;
+    position: absolute;
 }
