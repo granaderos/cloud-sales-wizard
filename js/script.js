@@ -75,18 +75,19 @@ function next() {
             displayDialog();
             return;
         }
-    } else if(willingToHireITPersonnel == 9) {
+    } else if(current_question == 9) {
         willingToHireITPersonnel = $("input[name='willingToHireITPersonnel']:checked").val();
         console.log("willingToHireITPersonnel = " + willingToHireITPersonnel);
         if(willingToHireITPersonnel == 0) {
-            alert("You are not yet ready for cloud.");
+            // alert("You are not yet ready for cloud.");
+            ready = 0;
         } else {
             ready = 1;
             // alert("You are ready for cloud.");
-            displayDialog();
-            return;
             // procees to the next set of questions
         }
+        displayDialog();
+        return;
     }
 
     $(".question-container").hide();
