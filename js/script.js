@@ -55,8 +55,9 @@ function next() {
     if(current_question > 0) {
         $("#btnBack").show();
     }
-
+    
     if(current_question == 2) {
+        
         haveSomethingToPutOnCloud = $("input[name='haveSomethingToPutOnCloud']:checked").val();
         console.log("haveSomethingToPutOnCloud " + haveSomethingToPutOnCloud);
         if(haveSomethingToPutOnCloud == 0) {
@@ -131,6 +132,9 @@ function next() {
 
     // $(".question-container").hide();
     ++current_question;
+    if(current_question > 1){
+        $("#question_1").hide();
+    }
     $("#question_" + current_question).slideDown("slow");
 }
 
