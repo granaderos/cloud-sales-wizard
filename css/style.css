@@ -1,19 +1,25 @@
-
+body {
+    overflow-x: hidden !important; 
+}
 /* =================== */
 /* PROGRESS BAR STYLES */
 /* =================== */
 .questionProgress {
-	text-align: center !important;
-	width: 100% !important;
-    /* margin: 30px auto 0 !important; */
-    margin: auto !important;
+    /* text-align: center !important; */
+    width: 100% !important;    
+    margin: 40px auto 0 !important;
 	display: table !important;
-	position: relative !important;
+    position: relative !important;
+    left: 15%;
+    /* background: yellow; */
 }
 .questionProgress ul {  
-	display: table-row !important;
+    display: table-row !important;
+    /* background: yellow; */
+
 }
 .questionProgress ul li {
+    /* width: 25%; */
 	background-color: #d6d6d6 !important; /* Default Bar Color */
 	display: table-cell !important;
 	position: relative !important;
@@ -21,19 +27,20 @@
 	z-index: -3 !important;
 	color: #FFF !important;
 	text-align: left !important;
-	transition: background-color 0.75s, color 0.5s !important;
+    transition: background-color 0.75s, color 0.5s !important;
+    
 }
 .questionProgress ul li::before {
-	content:'' !important;
+	content: '' !important;
 	width: 40px !important;
 	height: 40px !important;
 	color: #FFF !important;
-	line-height: 30px !important;
+	line-height: 20px !important;
 	text-align: center !important;
 	left: -15px !important;
 	background-color: #d6d6d6 !important;/* Default Circle Color */
 	border: solid 5px #d6d6d6 !important;/* Default Circle Color */
-	index: -9 !important;
+	/* index: -9 !important; */
 	position: absolute !important;
 	display: block !important;
 	top: -10px !important;	
@@ -113,7 +120,7 @@
 }
 
 #divFooter {
-    height: 100px;
+    height: 50px;
 }
 
 .question {
