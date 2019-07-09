@@ -1,3 +1,108 @@
+
+/* =================== */
+/* PROGRESS BAR STYLES */
+/* =================== */
+.questionProgress {
+	text-align: center !important;
+	width: 100% !important;
+    /* margin: 30px auto 0 !important; */
+    margin: auto !important;
+	display: table !important;
+	position: relative !important;
+}
+.questionProgress ul {  
+	display: table-row !important;
+}
+.questionProgress ul li {
+	background-color: #d6d6d6 !important; /* Default Bar Color */
+	display: table-cell !important;
+	position: relative !important;
+	line-height: 20px !important;
+	z-index: -3 !important;
+	color: #FFF !important;
+	text-align: left !important;
+	transition: background-color 0.75s, color 0.5s !important;
+}
+.questionProgress ul li::before {
+	content:'' !important;
+	width: 40px !important;
+	height: 40px !important;
+	color: #FFF !important;
+	line-height: 30px !important;
+	text-align: center !important;
+	left: -15px !important;
+	background-color: #d6d6d6 !important;/* Default Circle Color */
+	border: solid 5px #d6d6d6 !important;/* Default Circle Color */
+	index: -9 !important;
+	position: absolute !important;
+	display: block !important;
+	top: -10px !important;	
+	margin-right: auto !important;
+	margin-left: auto !important;
+	z-index: -1 !important;
+	transition: background-color 0.75s, color 0.5s !important;
+	-webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+	
+	-webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+/* CURRENT STEP */
+.questionProgress ul li.current {
+	display: inline-block !important;
+	width: 100% !important;
+	z-index: -3 !important;
+	color: #0e90d2 !important;
+	position: relative !important;
+	transition: background-color 0.75s, color 0.5s !important;
+	
+}
+.questionProgress ul li.current::before {
+	border: solid 5px #0e90d2 !important;/* Current Step Circle Color */
+	background-color: #FFF !important;
+	transition: background-color 0.75s, color 0.5s !important;
+	
+	-webkit-animation: pulse 3s ease-out !important;
+    -moz-animation: pulse 3s ease-out !important;
+    animation: pulse 3s ease-out !important;
+    -webkit-animation-iteration-count: infinite !important;
+    -moz-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+}
+/* COMPLETED STEPS */
+.questionProgress ul li.complete {
+	background-color: #0e90d2 !important; /* Completed Step Bar Color */
+	transition: background-color 0.75s, color 0.5s !important;
+}
+.questionProgress ul li.complete::before {
+	background-color: #0e90d2 !important; /* Completed Step Circle Color */
+	border: 5px solid transparent !important;
+	transition: background-color 0.75s, color 0.5s !important;
+}
+/* REMOVE FIRST STEP COLOR BAR LINE */
+.questionProgress ul li:last-of-type {
+	background-color: transparent !important;
+}
+.questionProgress ul li.current:last-of-type,
+.questionProgress ul li.complete:last-of-type  {
+	background-color: transparent !important;
+}
+
+@-webkit-keyframes pulse {
+    0% {-webkit-transform: scale(1, 1) !important; }
+    50% {-webkit-transform: scale(1.1, 1.1) !important;}
+    100% {-webkit-transform: scale(1, 1) !important;}
+}
+@-keyframes pulse {
+    0% {transform: scale(1, 1) !important;}
+    50% {transform: scale(1.1, 1.1) !important;}
+    100% {transform: scale(1, 1) !important;}
+}
+
+/* ends */
+
 #divHeader {
     background-color: #162935;
     margin-bottom: 30px;

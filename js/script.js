@@ -2,6 +2,36 @@ var current_question = 1;
 var total_questions = 9;
 $(document).ready(function() {
 
+    $('.summary_tooltip').tooltip();    
+
+    // $('#next').click(function () {
+    //     var $next = $('.questionProgress ul li.current').removeClass('current').addClass('complete').next('li');
+    //     if ($next.length) {
+    //         $next.removeClass('complete').addClass('current');
+    //         //console.log('Prev');
+    //     } else {
+    //         $(".questionProgress ul li:first").removeClass('complete').addClass('current');
+    //         if (".questionProgress ul li:last") {
+    //           $('.questionProgress ul li').removeClass('current').removeClass('complete').removeAttr('class');
+    //           $(".questionProgress ul li:first").addClass('current');
+    //         }
+    //         //console.log('Next');
+    //     }
+    // });
+    // $('#prev').click(function () {
+    //     var $prev = $('.questionProgress ul li.current').removeClass('current').removeClass('complete').removeAttr('class').prev('li');
+    //     if ($prev.length) {
+    //         $prev.removeClass('complete').addClass('current');
+    //         //console.log('Prev');
+    //     } else {
+    //         $(".questionProgress ul li:first").removeClass('complete').addClass('current');
+    //         $(".questionProgress ul li:last").removeClass('current').removeClass('complete').removeAttr('class');
+    //         //console.log('Prev');
+    //     }
+    // });
+
+    // end
+
     $("#btnGetStarted").click(function() {
         window.location.href = "wizard.html";
     })
@@ -146,6 +176,7 @@ function displayDialog() {
 }
 
 function displayCloudSpecificQuestions() {
+    progressNext();
     $(".question-container").hide();
     $(".b_question").show();
     $("#btnBack").hide();
@@ -163,6 +194,17 @@ function submit() {
     $("#divSummary").show();
 }
 
-$(document).ready(function() {
-    $('.summary_tooltip').tooltip();
-  });
+function progressNext() {
+    var $next = $('.questionProgress ul li.current').removeClass('current').addClass('complete').next('li');
+    if ($next.length) {
+        $next.removeClass('complete').addClass('current');
+        //console.log('Prev');
+    } else {
+        $(".questionProgress ul li:first").removeClass('complete').addClass('current');
+        if (".questionProgress ul li:last") {
+            $('.questionProgress ul li').removeClass('current').removeClass('complete').removeAttr('class');
+            $(".questionProgress ul li:first").addClass('current');
+        }
+        //console.log('Next');
+    }
+}
