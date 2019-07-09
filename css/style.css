@@ -136,14 +136,10 @@ tr>.thick-line {
     font-size: 20px;
 }
 
-.btn-back {
-    background-color: #cc0000;
-    color: white;
-}
-
 .btn-submit,
-.btn-next {
-    background-color: #29a329;
+.btn-next,
+.btn-back {
+    background-color: #094064;
     color: white;
     /* padding: */
 }
