@@ -3,7 +3,7 @@ var total_questions = 9;
 $(document).ready(function() {
 
     $("#btnGetStarted").click(function() {
-        window.location.href = "index.html";
+        window.location.href = "wizard.html";
     })
 
 });
@@ -99,7 +99,7 @@ function next() {
         return;
     }
 
-    $(".question-container").hide();
+    // $(".question-container").hide();
     ++current_question;
     $("#question_" + current_question).show("slide", { direction: "right" }, 1000);
 }
