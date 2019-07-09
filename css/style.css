@@ -15,10 +15,14 @@
     font-size: 20px;
 }
 
-.btn-back,
+.btn-back {
+    background-color: #cc0000;
+    color: white;
+}
+
 .btn-submit,
 .btn-next {
-    background-color: #ba1430;
+    background-color: #29a329;
     color: white;
     /* padding: */
 }
@@ -75,8 +79,11 @@ tr>.thick-line {
     /* font-weight: bold; */
 }
 
-button:hover {
-    background-color: #80010c;
+
+.button:hover {
+    background-color: #313131;
+    opacity: .9;
+    filter: alpha(opacity=50);
 }
 
 .button {
