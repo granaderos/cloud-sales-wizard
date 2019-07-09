@@ -75,7 +75,9 @@ tr>.thick-line {
 }
 
 button:hover {
-    background-color: white;
+    background-color: #313131;
+    opacity: .9;
+    filter: alpha(opacity=50);
 }
 
 .button {
