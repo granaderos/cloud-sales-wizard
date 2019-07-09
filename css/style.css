@@ -18,13 +18,13 @@
 .btn-back,
 .btn-submit,
 .btn-next {
-    background-color: #162935;
+    background-color: #ba1430;
     color: white;
     /* padding: */
 }
 
 #divOutput .card {
-    margin: 20px;
+    margin: 20px;   
 }
 
 .hidden {
@@ -70,45 +70,41 @@ tr>.thick-line {
     font-stretch: semi-expanded;
     padding: 0.5px;
     color: white;
-    background-color: #313131;
+    background-color: #313131; 
     letter-spacing: 3px;
+    /* font-weight: bold; */
 }
 
 button:hover {
-    background-color: white;
+    background-color: #80010c;
 }
 
 .button {
-    opacity: .7;
+    /* opacity: .75;
     filter: alpha(opacity=50);
     border-style: solid;
-    border: 10px white;
-    margin-top: 22%;
-    margin-left: 10%;
+    border: 10px white; */
+    top: 58%;
+    left: 38%;
     position: absolute;
-}
-
-.title {
-    margin-left: 10%;
-    margin-top: 10%;
-    color: whitesmoke;
-    font-size: 60px;
-    position: absolute;
-    letter-spacing: 3px;
 }
 
 .headline {
-    margin-left: 10%;
-    margin-top: 16%;
+    margin-left: 260px;
+    margin-top: 220px;
     color: whitesmoke;
-    font-size: 27px;
+    font-size: 38px;
     position: absolute;
-    font-style: italic;
 }
 
-.page-header {
-    color: #162935;
-    font-weight: bold;
-    margin-top: -5px;
-    padding-bottom: 10px;
+#summary-bg {
+    background-color: #094064;
+    border-radius: 10px;
+    height: 60px;
+}
+
+#summary-title {
+    color: white;
+    margin: 10px;
+    padding: 10px;
 }
