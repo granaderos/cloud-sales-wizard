@@ -2,7 +2,7 @@ var current_question = 1;
 var total_questions = 9;
 $(document).ready(function() {
 
-    $('.summary_tooltip').tooltip();    
+    $('.summary_tooltip').tooltip();
 
     $("#btnGetStarted").click(function() {
         window.location.href = "wizard.html";
@@ -24,53 +24,53 @@ var ready = -1;
 function next() {
     console.log("current question = " + current_question)
 
-    if(current_question > 0) {
+    if (current_question > 0) {
         $("#btnBack").show();
     }
-    
-    if(current_question == 2) {
-        
+
+    if (current_question == 2) {
+
         haveSomethingToPutOnCloud = $("input[name='haveSomethingToPutOnCloud']:checked").val();
         console.log("haveSomethingToPutOnCloud " + haveSomethingToPutOnCloud);
-        if(haveSomethingToPutOnCloud == 0) {
+        if (haveSomethingToPutOnCloud == 0) {
             // alert("You're not ready for cloud.")
             ready = 0;
             displayDialog();
             return;
         }
-    } else if(current_question == 3) {
+    } else if (current_question == 3) {
         hasAnExistingApplication = $("input[name='hasAnExistingApplication']:checked").val();
         console.log("hasAnExistingApplication = " + hasAnExistingApplication)
 
-        if(hasAnExistingApplication == 0) {
+        if (hasAnExistingApplication == 0) {
             // proceed to q6
-            current_question+=2;
+            current_question += 2;
         }
-    } else if(current_question == 4) {
+    } else if (current_question == 4) {
         clientHasApplicationKnowledge = $("input[name='clientHasApplicationKnowledge']:checked").val();
         console.log("clientHasApplicationKnowledge = " + clientHasApplicationKnowledge);
-        if(clientHasApplicationKnowledge == 0) {
+        if (clientHasApplicationKnowledge == 0) {
             ++current_question;
         }
-    } else if(current_question == 5) {
+    } else if (current_question == 5) {
         clientHasCloudKnowledge = $("input[name='clientHasCloudKnowledge']:checked").val();
         console.log("clientHasCloudKnowledge = " + clientHasCloudKnowledge)
-        if(clientHasCloudKnowledge == 1) {
+        if (clientHasCloudKnowledge == 1) {
             // alert("You are ready for cloud.");
             ready = 1;
             displayDialog();
             return;
         }
-    } else if(current_question == 6) {
+    } else if (current_question == 6) {
         clientHasITPersonnel = $("input[name='clientHasITPersonnel']:checked").val();
         console.log("clientHasITPersonnel = " + clientHasITPersonnel);
-        if(clientHasITPersonnel == 0) {
+        if (clientHasITPersonnel == 0) {
             ++current_question;
         }
-    } else if(current_question == 7) {
+    } else if (current_question == 7) {
         personnelHasCloudKnowledge = $("input[name='personnelHasCloudKnowledge']:checked").val();
         console.log("personnelHasCloudKnowledge = " + personnelHasCloudKnowledge);
-        if(personnelHasCloudKnowledge == 0) {
+        if (personnelHasCloudKnowledge == 0) {
             ++current_question;
         } else {
             ready = 1;
@@ -78,19 +78,19 @@ function next() {
             displayDialog();
             return;
         }
-    } else if(current_question == 8) {
+    } else if (current_question == 8) {
         availIBMSupport = $("input[name='availIBMSupport']:checked").val();
         console.log("availIBMSupport = " + availIBMSupport);
-        if(availIBMSupport == 1) {
+        if (availIBMSupport == 1) {
             ready = 1;
             // alert("You are ready for cloud.");
             displayDialog();
             return;
         }
-    } else if(current_question == 9) {
+    } else if (current_question == 9) {
         willingToHireITPersonnel = $("input[name='willingToHireITPersonnel']:checked").val();
         console.log("willingToHireITPersonnel = " + willingToHireITPersonnel);
-        if(willingToHireITPersonnel == 0) {
+        if (willingToHireITPersonnel == 0) {
             // alert("You are not yet ready for cloud.");
             ready = 0;
         } else {
@@ -104,7 +104,7 @@ function next() {
 
     // $(".question-container").hide();
     ++current_question;
-    if(current_question == 2){
+    if (current_question == 2) {
         $("#question_1").hide();
         progressNext();
     }
@@ -112,18 +112,18 @@ function next() {
 }
 
 function displayDialog() {
-    if(ready == 1) {
+    if (ready == 1) {
         $("#divReady").dialog({
             show: {
                 effect: "slide",
                 duration: 500
             },
             hide: {
-                effect: "explode",
+                effect: "fade",
                 duration: 500
             },
             modal: true,
-            width:400,
+            width: 400,
             buttons: {
                 "Proceed": function() {
                     $(this).dialog("close");
@@ -142,7 +142,7 @@ function displayDialog() {
                 duration: 500
             },
             modal: true,
-            width:400,
+            width: 400,
             buttons: {
                 "Close": function() {
                     window.location.reload();
