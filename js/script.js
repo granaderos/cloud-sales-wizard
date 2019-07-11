@@ -120,7 +120,7 @@ function displayDialog() {
             },
             hide: {
                 effect: "fade",
-                duration: 500
+                duration: 300
             },
             modal: true,
             width: 400,
@@ -138,8 +138,8 @@ function displayDialog() {
                 duration: 500
             },
             hide: {
-                effect: "explode",
-                duration: 500
+                effect: "fade",
+                duration: 300
             },
             modal: true,
             width: 400,
