@@ -167,6 +167,7 @@ function submit() {
     $("#divOutput").show();
     $("#divRedhat").show();
     $("#divGoogleCloud").show();
+    $("#divIBMCloud").show();
     $("#questions_div").hide();
     $("#divSummary").show();
     $(".questionProgress ul li").hide();
